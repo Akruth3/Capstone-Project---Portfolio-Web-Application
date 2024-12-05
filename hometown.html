@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Hometown</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-left-container">
+      <a href="index.html">
+        <h1>My Portfolio</h1>
+      </a>
+    </div>
+    <nav class="header-menu-links hide-on-mobile">
+      <a href="index.html">Home</a>
+      <a href="hometown.html">Home Town</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="about.html">About Me</a>
+    </nav>
+    <a href="javascript:void(0);" class="icon hide-on-desktop">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav class="header-menu-links header-menu-links-sidebar hide-on-desktop">
+      <a href="javascript:void(0);" class="icon cross-icon">
+        <i class="fa fa-times"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="hometown.html">Home Town</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="about.html">About Me</a>
+    </nav>
+
+    <script>
+      const hamburgerIcon = document.querySelector(".icon");
+      const crossIcon = document.querySelector(".cross-icon");
+      const sideBarMenu = document.querySelector(".header-menu-links-sidebar");
+      hamburgerIcon.addEventListener('click', () => {
+        sideBarMenu.style.opacity = '1'
+        sideBarMenu.style.transform = 'translateX(0)'
+      })
+      crossIcon.addEventListener('click', () => {
+        sideBarMenu.style.opacity = '0'
+        sideBarMenu.style.transform = 'translateX(200%)'
+      })
+    </script>
+  </header>
+  <section class="content-container">
+    <h1>About My Hometown</h1>
+    <div class="box-card-layout w-100">
+      <img src="images/Hyderabad.jpg" alt="hyderabad" width="450" />
+      <p>
+        Hyderabad, often referred to as the "City of Pearls" or the "City of
+        Nizams," is the capital city of the Indian state of Telangana. It is
+        one of the largest and most populous cities in India, known for its
+        rich history, vibrant culture, and architectural heritage.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Hyderabad" target="_blank">See More</a>
+    </div>
+    <h1>Tourist Attractions</h1>
+    <div class="hometown-content">
+      <div class="box-card-layout">
+        <img src="images/Charminar.jpg" alt="charminar" width="250" />
+        <p>
+          The Charminar is a monument located in Hyderabad, Telangana, India.
+          Constructed in 1591, the landmark is a symbol of Hyderabad and
+          officially incorporated in the emblem of Telangana.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Charminar" target="_blank">See More</a>
+      </div>
+      <div class="box-card-layout">
+        <img src="images/golconda.jpg" alt="temple" width="250" />
+        <p>
+          Golconda is a fortified citadel and ruined city located in the
+          western outskirts of Hyderabad, Telangana, India. The fort was
+          originally built by Kakatiya ruler Pratāparudra in the 11th century
+          out of mud walls.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Golconda" target="_blank">See More</a>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

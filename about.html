@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-left-container">
+      <a href="index.html">
+        <h1>My Portfolio</h1>
+      </a>
+    </div>
+    <nav class="header-menu-links hide-on-mobile">
+      <a href="index.html">Home</a>
+      <a href="hometown.html">Home Town</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="about.html">About Me</a>
+    </nav>
+    <a href="javascript:void(0);" class="icon hide-on-desktop">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav class="header-menu-links header-menu-links-sidebar hide-on-desktop">
+      <a href="javascript:void(0);" class="icon cross-icon">
+        <i class="fa fa-times"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="hometown.html">Home Town</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="about.html">About Me</a>
+    </nav>
+
+    <script>
+      const hamburgerIcon = document.querySelector(".icon");
+      const crossIcon = document.querySelector(".cross-icon");
+      const sideBarMenu = document.querySelector(".header-menu-links-sidebar");
+      hamburgerIcon.addEventListener('click', () => {
+        sideBarMenu.style.opacity = '1'
+        sideBarMenu.style.transform = 'translateX(0)'
+      })
+      crossIcon.addEventListener('click', () => {
+        sideBarMenu.style.opacity = '0'
+        sideBarMenu.style.transform = 'translateX(200%)'
+      })
+    </script>
+  </header>
+  <section class="content-container">
+    <ul class="list-items-container">
+      <li>Hi, I'm Pradeep Narikelapu, a student currently pursuing my Masters in Computer Science at Youngstown State
+        University. I am passionate about software development, and I enjoy learning new things and solving challenges.
+
+        I have gained experience in building websites by working on a portfolio project, and I am excited to apply my
+        knowledge in real-world situations. I am always looking to grow and develop my skills.
+        Thank you for visiting my portfolio!
+      </li>
+
+    </ul>
+    <h1>Education</h1>
+    <div class="table__wrapper">
+      <table class="table-container">
+        <tr>
+          <th>S NO</th>
+          <th>Degree/Program</th>
+          <th>Institution</th>
+          <th>CGPA</th>
+          <th>Location</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>High School</td>
+          <td>Narayana</td>
+          <td>90%</td>
+          <td>Hyderabad</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Bachelor of Science (BS)</td>
+          <td>JNTUH</td>
+          <td>65%</td>
+          <td>Hyderabad</td>
+        </tr>
+      </table>
+    </div>
+    <h1>Contact Me</h1>
+    <ul class="list-items-container contact-me-container">
+      <li><strong>Address:</strong> 5-243A, millu subbaiah Bazar, janapadu, Piduguralla, Andhra Pradesh, India</li>
+      <li> <strong class="icon"><i class="fa fa-linkedin-square"></i> Linked In:</strong> <a target="_blank"
+          href="https://www.linkedin.com/in/pradeep-narikelapu-3273741a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+          Connect via linkedin
+        </a> </li>
+    </ul>
+
+    <div class="tabs-container input-div">
+      <textarea placeholder="Send Me a Message !" id="input__field" cols="100" rows="7"></textarea>
+      <button class="active__btn tab__btn">Submit</button>
+    </div>
+
+  </section>
+  <script>
+    const input = document.querySelector('#input__field');
+    const validateBtn = document.querySelector('.tab__btn');
+    validateBtn.addEventListener('click', (e) => {
+      const inputValue = input.value;
+      if (inputValue) {
+        if (inputValue.trim().length < 10) {
+          alert('Minimum 10 characters required. Please provide more details.');
+          return;
+        }
+        alert('Message sent! Thank you for reaching out.');
+        input.value = ''
+      } else {
+        alert('Submission failed. Please ensure all fields are filled out correctly.');
+      }
+
+    })
+  </script>
+</body>
+
+</html>

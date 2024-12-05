@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-left-container">
+      <a href="index.html">
+        <h1>My Portfolio</h1>
+      </a>
+    </div>
+    <nav class="header-menu-links hide-on-mobile">
+      <a href="index.html">Home</a>
+      <a href="hometown.html">Home Town</a>
+      <a href="hobbies.html">Hobbies</a>
+         <a href="about.html">About Me</a>
+    </nav>
+    <a href="javascript:void(0);" class="icon hide-on-desktop">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav class="header-menu-links header-menu-links-sidebar hide-on-desktop">
+      <a href="javascript:void(0);" class="icon cross-icon">
+        <i class="fa fa-times"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="hometown.html">Home Town</a>
+      <a href="hobbies.html">Hobbies</a>
+         <a href="about.html">About Me</a>
+    </nav>
+
+    <script>
+      const hamburgerIcon = document.querySelector(".icon");
+      const crossIcon = document.querySelector(".cross-icon");
+      const sideBarMenu = document.querySelector(".header-menu-links-sidebar");
+      hamburgerIcon.addEventListener('click', () => {
+        sideBarMenu.style.opacity = '1'
+        sideBarMenu.style.transform = 'translateX(0)'
+      })
+      crossIcon.addEventListener('click', () => {
+        sideBarMenu.style.opacity = '0'
+        sideBarMenu.style.transform = 'translateX(200%)'
+      })
+    </script>
+  </header>
+
+  <section class="home-content">
+    <h1>Welcome to my portfolio website!</h1>
+    <p>This is the home page of my website. Feel free to explore!</p>
+  </section>
+</body>
+
+</html>

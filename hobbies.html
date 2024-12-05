@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Hobbies</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-left-container">
+      <a href="index.html">
+        <h1>My Portfolio</h1>
+      </a>
+    </div>
+    <nav class="header-menu-links hide-on-mobile">
+      <a href="index.html">Home</a>
+      <a href="hometown.html">Home Town</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="about.html">About Me</a>
+    </nav>
+    <a href="javascript:void(0);" class="icon hide-on-desktop">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav class="header-menu-links header-menu-links-sidebar hide-on-desktop">
+      <a href="javascript:void(0);" class="icon cross-icon">
+        <i class="fa fa-times"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="hometown.html">Home Town</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="about.html">About Me</a>
+    </nav>
+
+    <script>
+      const hamburgerIcon = document.querySelector(".icon");
+      const crossIcon = document.querySelector(".cross-icon");
+      const sideBarMenu = document.querySelector(".header-menu-links-sidebar");
+      hamburgerIcon.addEventListener('click', () => {
+        sideBarMenu.style.opacity = '1'
+        sideBarMenu.style.transform = 'translateX(0)'
+      })
+      crossIcon.addEventListener('click', () => {
+        sideBarMenu.style.opacity = '0'
+        sideBarMenu.style.transform = 'translateX(200%)'
+      })
+    </script>
+  </header>
+  <section class="content-container">
+    <div class="tabs-container">
+      <button class="active__btn tab__btn" id="hobbies" id="">
+        Main Hobbies
+      </button>
+      <button class="tab__btn" id="accordian">
+        Leisure Hobbies
+      </button>
+    </div>
+    <div class="visible hobbies__div">
+      <div class="box-card-layout w-100">
+        <img src="images/photography.webp" alt="travel" width="300" />
+        <p>
+          Photography is not just a hobby for me; it's a deeply ingrained
+          passion that brings me immense joy and fulfillment. Ever since I
+          picked up my first camera, I've been captivated by the art of
+          capturing moments and telling stories through images. Photography
+          allows me to express myself in ways that words cannot, to see the
+          world through a different lens, and to share my unique perspective
+          with others.
+        </p>
+      </div>
+      <div class="box-card-layout w-100">
+        <img src="images/Astronomy.jpg" alt="cooking" width="300" />
+        <p>
+          Astronomy is more than just a hobby for me; it's a lifelong passion
+          that fills me with wonder and awe every time I gaze up at the night
+          sky. From the twinkling of distant stars to the dance of planets
+          across the heavens, astronomy allows me to explore the vastness of
+          the universe and unlock the secrets of the cosmos. When I'm
+          observing the night sky through my telescope, I feel a sense of
+          excitement and anticipation, knowing that I'm glimpsing objects that
+          are millions or even billions of light-years away. Each time I peer
+          through the eyepiece, I'm transported to distant worlds, marveling
+          at the beauty and complexity of the universe. But astronomy is more
+          than just stargazing; it's also a journey of discovery and
+          exploration.
+        </p>
+      </div>
+    </div>
+    <div class="hidden accordian__div">
+      <button class="accordion">Cooking</button>
+      <div class="panel">
+        <p>
+          Cooking is not just a hobby for me; it's a passion that ignites my
+          creativity and nourishes my soul. Whether I'm experimenting with new
+          ingredients, mastering classic recipes, or crafting my own culinary
+          creations, cooking allows me to express myself in the most delicious
+          way possible. When I step into the kitchen, I feel a sense of
+          excitement and anticipation, knowing that each dish I prepare is an
+          opportunity to delight the senses and bring joy to others. From the
+          sizzle of onions in a hot pan to the aroma of freshly baked bread
+          filling the air, cooking engages all of my senses and transports me
+          to a world of flavors, textures, and colors.
+        </p>
+      </div>
+
+      <button class="accordion">Traveling</button>
+      <div class="panel">
+        <p>
+          Traveling is my ultimate escape—a journey of exploration, discovery,
+          and endless adventure. It's not just a hobby; it's a way of life
+          that fuels my curiosity and feeds my soul. When I'm on the road, I
+          feel alive, free, and connected to the world in a way that's hard to
+          describe
+        </p>
+      </div>
+
+      <button class="accordion">Badminton</button>
+      <div class="panel">
+        <p>
+          Playing badminton is my favorite way to stay active and have fun.
+          It's not just a sport; it's a thrilling experience that gets my
+          heart pumping and my adrenaline flowing. When I step onto the court
+          with racket in hand, I feel a sense of excitement and anticipation,
+          knowing that every rally is a chance to showcase my skills and push
+          myself to new limits.
+        </p>
+      </div>
+    </div>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
